@@ -28,25 +28,25 @@ function playRound()      {
          }
          
          else if (playerSelection === "rock" && computerSelection === "scissors"){
-            return ("You win," + playerSelection + "beats" + computerSelection);
+            return ("You win, " + playerSelection + " beats " + computerSelection);
          }
   
 
          else if (playerSelection === "paper" && computerSelection === "scissors") {
-            return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
+            return ("You lost, Bobby. You're a loser, Bobby. " + computerSelection + " beats " + playerSelection);
         }
 
         else if (playerSelection === "paper" && computerSelection === "rock") {
-            return ("You win," + playerSelection + "beats" + computerSelection);
+            return ("You win," + playerSelection + " beats " + computerSelection);
       }
 
          else if(playerSelection === "scissors" && computerSelection === "rock") {
-            return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
+            return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + " beats " + playerSelection);
         }
 
 
         else if (playerSelection === "scissors" && computerSelection === "paper") {
-            return ("You win," + playerSelection + "beats" + computerSelection);
+            return ("You win," + playerSelection + " beats " + computerSelection);
          }
   
 
