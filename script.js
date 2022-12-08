@@ -10,42 +10,43 @@ const myArray = ["rock", "paper", "scissors"];
 
 function playRound()      {
 
-    var playerSelection = prompt("rock, paper or scissors?");
+    var playerInput = prompt("rock, paper or scissors?");
+    var playerSelection = playerInput.toLowerCase();
     var  computerSelection = getComputerChoice();    
     if (playerSelection === computerSelection)  {
-        console.log("It's a tie")
+        return ("It's a tie")
     }
    
    
 
      else if (playerSelection === computerSelection) {
-         console.log("it's a tie");}
+        return ("it's a tie");}
       
 
      else if (playerSelection === "rock" && computerSelection === "paper") {
-         console.log("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
+         return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
          }
          
          else if (playerSelection === "rock" && computerSelection === "scissors"){
-            console.log("You win," + playerSelection + "beats" + computerSelection);
+            return ("You win," + playerSelection + "beats" + computerSelection);
          }
   
 
          else if (playerSelection === "paper" && computerSelection === "scissors") {
-        console.log("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
+            return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
         }
 
         else if (playerSelection === "paper" && computerSelection === "rock") {
-         console.log("You win," + playerSelection + "beats" + computerSelection);
+            return ("You win," + playerSelection + "beats" + computerSelection);
       }
 
          else if(playerSelection === "scissors" && computerSelection === "rock") {
-        console.log("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
+            return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
         }
 
 
         else if (playerSelection === "scissors" && computerSelection === "paper") {
-            console.log("You win," + playerSelection + "beats" + computerSelection);
+            return ("You win," + playerSelection + "beats" + computerSelection);
          }
   
 
@@ -85,7 +86,14 @@ function    getComputerChoice()         {
 }
 function    Game()      {
     
-    playRound();
+
+    for (let i=0; i < 5; i++)   {
+    console.log(playRound());
+
+    }
+
+
+
 
     }
 
