@@ -1,5 +1,7 @@
 body        {
 
-    background-color: blue;
+    
+    background-image: url("RPS.jpg");
+    background-size: cover;
 
 }
