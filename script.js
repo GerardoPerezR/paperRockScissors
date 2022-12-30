@@ -5,29 +5,49 @@ console.log("Rock, Paper, Scissors")
 
 const myArray = ["rock", "paper", "scissors"];
 
+const rock = document.querySelector('#Rock');
+rock.addEventListener('click',
+ () => {console.log(playRound("rock", getComputerChoice()))
+       
+   } 
+)
 
+const paper = document.querySelector('#Paper');
+paper.addEventListener('click',
+ () => {console.log(playRound("paper", getComputerChoice()))
+       
+   } 
+)
 
+const scissors = document.querySelector('#Scissors');
+scissors.addEventListener('click',
+ () => {console.log(playRound("scissors", getComputerChoice()))
+       
+   } 
+)
 
-function playRound()      {
+function playRound(playerSelection, computerSelection)      {
 
-    var playerInput = prompt("rock, paper or scissors?");
-    var playerSelection = playerInput.toLowerCase();
-    var  computerSelection = getComputerChoice();    
+    console.log(playerSelection +  computerSelection);
+  
+    //var playerInput = prompt("rock, paper or scissors?");
+    
+    // var playerSelection = playerInput.toLowerCase();
+   //var  computerSelection = getComputerChoice();    
     if (playerSelection === computerSelection)  {
-        return ("It's a tie")
+        console.log("empate");
+        return ("It's a tie");
+      
     }
    
-   
 
-     else if (playerSelection === computerSelection) {
-        return ("it's a tie");}
-      
-
-     else if (playerSelection === "rock" && computerSelection === "paper") {
+        else if (playerSelection === "rock" && computerSelection === "paper") {
+            console.log("gana el papel");
          return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
          }
          
          else if (playerSelection === "rock" && computerSelection === "scissors"){
+            console.log("ganan las tijeras");
             return ("You win, " + playerSelection + " beats " + computerSelection);
          }
   
@@ -51,20 +71,14 @@ function playRound()      {
   
 
          
-   
+
 
     }
 
 
+  
 
 
-
-
-
-    
-
-
-          
 
 
 
@@ -84,17 +98,20 @@ function    getComputerChoice()         {
 
 
 }
-function    Game()      {
+//function    Game()      {  for (let i=0; i < 5; i++)   {
+//    console.log(playRound());
+
+//}
     
 
-    for (let i=0; i < 5; i++)   {
-    console.log(playRound());
+ //   for (let i=0; i < 5; i++)   {
+ //   console.log(playRound());
 
-    }
-
-
+   // }
 
 
-    }
 
-Game();
+
+  //  }
+
+//Game();       *
