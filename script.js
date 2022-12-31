@@ -6,22 +6,23 @@ console.log("Rock, Paper, Scissors")
 const myArray = ["rock", "paper", "scissors"];
 
 const rock = document.querySelector('#Rock');
+const result = document.getElementById('result');
 rock.addEventListener('click',
- () => {console.log(playRound("rock", getComputerChoice()))
+ () => {result.textContent = (playRound("rock", getComputerChoice()))
        
    } 
 )
 
 const paper = document.querySelector('#Paper');
 paper.addEventListener('click',
- () => {console.log(playRound("paper", getComputerChoice()))
+ () => {result.textContent = (playRound("paper", getComputerChoice()))
        
    } 
 )
 
 const scissors = document.querySelector('#Scissors');
 scissors.addEventListener('click',
- () => {console.log(playRound("scissors", getComputerChoice()))
+ () => {result.textContent = (playRound("scissors", getComputerChoice()))
        
    } 
 )
