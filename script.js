@@ -46,7 +46,7 @@ function playRound(playerSelection, computerSelection)      {
 
         else if (playerSelection === "rock" && computerSelection === "paper") {
             console.log("gana el papel");
-         return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + "beats" + playerSelection);
+         return ("You lost." + computerSelection + "beats" + playerSelection);
          }
          
          else if (playerSelection === "rock" && computerSelection === "scissors"){
@@ -56,7 +56,7 @@ function playRound(playerSelection, computerSelection)      {
   
 
          else if (playerSelection === "paper" && computerSelection === "scissors") {
-            return ("You lost, Bobby. You're a loser, Bobby. " + computerSelection + " beats " + playerSelection);
+            return ("You lost. " + computerSelection + " beats " + playerSelection);
         }
 
         else if (playerSelection === "paper" && computerSelection === "rock") {
@@ -64,7 +64,7 @@ function playRound(playerSelection, computerSelection)      {
       }
 
          else if(playerSelection === "scissors" && computerSelection === "rock") {
-            return ("You lost, Bobby. You're a loser, Bobby." + computerSelection + " beats " + playerSelection);
+            return ("You lost." + computerSelection + " beats " + playerSelection);
         }
 
 
