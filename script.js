@@ -1,4 +1,6 @@
 console.log("Rock, Paper, Scissors")
+var   playerScore = 0;
+var computerScore = 0;
 
 
 

@@ -3,6 +3,10 @@ body        {
     
     background-image: url("RPS.jpg");
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -10,4 +14,20 @@ body        {
 #result {
 
     color: azure;
+}
+
+
+.buttons    {
+    display: flex;
+    flex-direction: row;
+    width:  100vw ;
+    margin-top: 240px;
+    justify-content: space-around;
+}
+
+
+.button    {
+    opacity: 0;
+    width: 240px;
+height: 480px;
 }
