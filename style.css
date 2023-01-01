@@ -17,6 +17,12 @@ body        {
 }
 
 
+#score  {
+
+    color: azure;
+}
+
+
 .buttons    {
     display: flex;
     flex-direction: row;

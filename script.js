@@ -9,6 +9,9 @@ const myArray = ["rock", "paper", "scissors"];
 
 const rock = document.querySelector('#Rock');
 const result = document.getElementById('result');
+const plyerScore = document.getElementById('playerScore');
+const cmputerScore = document.getElementById('computerScore');
+
 rock.addEventListener('click',
  () => {result.textContent = (playRound("rock", getComputerChoice()))
        
@@ -46,29 +49,43 @@ function playRound(playerSelection, computerSelection)      {
 
         else if (playerSelection === "rock" && computerSelection === "paper") {
             console.log("gana el papel");
+            computerScore = computerScore + 1;
+            cmputerScore.textContent = computerScore;
+            
          return ("You lost." + computerSelection + "beats" + playerSelection);
          }
          
          else if (playerSelection === "rock" && computerSelection === "scissors"){
             console.log("ganan las tijeras");
+            playerScore = playerScore + 1;
+            plyerScore.textContent = playerScore;
             return ("You win, " + playerSelection + " beats " + computerSelection);
          }
   
 
          else if (playerSelection === "paper" && computerSelection === "scissors") {
+            computerScore = computerScore + 1;
+            cmputerScore.textContent = computerScore;
             return ("You lost. " + computerSelection + " beats " + playerSelection);
         }
 
         else if (playerSelection === "paper" && computerSelection === "rock") {
+            playerScore = playerScore + 1;
+            plyerScore.textContent = playerScore;
             return ("You win," + playerSelection + " beats " + computerSelection);
       }
 
          else if(playerSelection === "scissors" && computerSelection === "rock") {
+            computerScore = computerScore + 1;
+            cmputerScore.textContent = computerScore;
             return ("You lost." + computerSelection + " beats " + playerSelection);
         }
 
 
         else if (playerSelection === "scissors" && computerSelection === "paper") {
+            playerScore = playerScore + 1;
+            plyerScore.textContent = playerScore;
+            cmputerScore.textContent = computerScore;
             return ("You win," + playerSelection + " beats " + computerSelection);
          }
   
