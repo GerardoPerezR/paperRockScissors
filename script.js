@@ -1,6 +1,7 @@
 console.log("Rock, Paper, Scissors")
 var   playerScore = 0;
 var computerScore = 0;
+const playerName  = prompt("What's your name?");
 
 
 
@@ -11,7 +12,9 @@ const rock = document.querySelector('#Rock');
 const result = document.getElementById('result');
 const plyerScore = document.getElementById('playerScore');
 const cmputerScore = document.getElementById('computerScore');
+const final =  document.getElementById('final');
 
+plyerScore.textContent = playerName;
 rock.addEventListener('click',
  () => {result.textContent = (playRound("rock", getComputerChoice()))
        
@@ -42,6 +45,7 @@ function playRound(playerSelection, computerSelection)      {
    //var  computerSelection = getComputerChoice();    
     if (playerSelection === computerSelection)  {
         console.log("empate");
+        checkScore(playerScore,  computerScore)
         return ("It's a tie");
       
     }
@@ -50,6 +54,7 @@ function playRound(playerSelection, computerSelection)      {
         else if (playerSelection === "rock" && computerSelection === "paper") {
             console.log("gana el papel");
             computerScore = computerScore + 1;
+            checkScore(playerScore,  computerScore)
             cmputerScore.textContent = computerScore;
             
          return ("You lost." + computerSelection + "beats" + playerSelection);
@@ -58,7 +63,8 @@ function playRound(playerSelection, computerSelection)      {
          else if (playerSelection === "rock" && computerSelection === "scissors"){
             console.log("ganan las tijeras");
             playerScore = playerScore + 1;
-            plyerScore.textContent = playerScore;
+            checkScore(playerScore,  computerScore)
+            plyerScore.textContent = playerName + playerScore;
             return ("You win, " + playerSelection + " beats " + computerSelection);
          }
   
@@ -66,26 +72,30 @@ function playRound(playerSelection, computerSelection)      {
          else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore = computerScore + 1;
             cmputerScore.textContent = computerScore;
+            checkScore(playerScore,  computerScore)
             return ("You lost. " + computerSelection + " beats " + playerSelection);
         }
 
         else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore = playerScore + 1;
-            plyerScore.textContent = playerScore;
+            plyerScore.textContent = playerName + playerScore;
+            checkScore(playerScore,  computerScore)
             return ("You win," + playerSelection + " beats " + computerSelection);
       }
 
          else if(playerSelection === "scissors" && computerSelection === "rock") {
             computerScore = computerScore + 1;
             cmputerScore.textContent = computerScore;
+            checkScore(playerScore,  computerScore)
             return ("You lost." + computerSelection + " beats " + playerSelection);
         }
 
 
         else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore = playerScore + 1;
-            plyerScore.textContent = playerScore;
+            plyerScore.textContent = "PLAYER SCORE:" + "    "  + playerScore;
             cmputerScore.textContent = computerScore;
+            checkScore(playerScore,  computerScore)
             return ("You win," + playerSelection + " beats " + computerSelection);
          }
   
@@ -97,7 +107,23 @@ function playRound(playerSelection, computerSelection)      {
 
 
   
+function checkScore(playerScore, computerScore)  {
 
+   if (playerScore == 5) {
+
+      console.log("YOU WIN!!!")
+      final.textContent = "YOU WIN!!!";
+
+     
+      }
+      
+ else if  (computerScore == 5)  {
+
+        final.textContent = "COMPUTER WINS!!";
+
+   }
+
+}
 
 
 
