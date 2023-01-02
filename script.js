@@ -37,7 +37,7 @@ scissors.addEventListener('click',
 
 function playRound(playerSelection, computerSelection)      {
 
-    console.log(playerSelection +  computerSelection);
+    console.log(playerSelection + computerSelection);
   
     //var playerInput = prompt("rock, paper or scissors?");
     
@@ -64,7 +64,7 @@ function playRound(playerSelection, computerSelection)      {
             console.log("ganan las tijeras");
             playerScore = playerScore + 1;
             checkScore(playerScore,  computerScore)
-            plyerScore.textContent = playerName + playerScore;
+            plyerScore.textContent = playerName + "        " + playerScore;
             return ("You win, " + playerSelection + " beats " + computerSelection);
          }
   
@@ -78,7 +78,7 @@ function playRound(playerSelection, computerSelection)      {
 
         else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore = playerScore + 1;
-            plyerScore.textContent = playerName + playerScore;
+            plyerScore.textContent = playerName + "        " + playerScore;
             checkScore(playerScore,  computerScore)
             return ("You win," + playerSelection + " beats " + computerSelection);
       }
@@ -93,7 +93,7 @@ function playRound(playerSelection, computerSelection)      {
 
         else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore = playerScore + 1;
-            plyerScore.textContent = "PLAYER SCORE:" + "    "  + playerScore;
+            plyerScore.textContent = playerName + "      "  + playerScore;
             cmputerScore.textContent = computerScore;
             checkScore(playerScore,  computerScore)
             return ("You win," + playerSelection + " beats " + computerSelection);
