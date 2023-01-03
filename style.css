@@ -34,7 +34,7 @@ body        {
     display: flex;
     flex-direction: row;
     width:  100vw ;
-    margin-top: 240px;
+   
     justify-content: space-around;
 }
 
@@ -43,11 +43,29 @@ body        {
     opacity: 0;
     width: 240px;
 height: 480px;
+    border-color: azure;
 }
 
 
 #final      {
 
     color: azure;
+    font-size: 96px;
 
+}
+
+.computerChoice {
+
+
+    border-style: solid;
+    border-width: 12px;
+    border-color: yellow;
+    opacity: 10%;
+}
+
+.playerChoice   {
+
+    border-style:  solid;
+    border-width: 12px;
+    border-color: red;
 }

@@ -55,8 +55,9 @@ function playRound(playerSelection, computerSelection)      {
             console.log("gana el papel");
             computerScore = computerScore + 1;
             checkScore(playerScore,  computerScore)
-            cmputerScore.textContent = computerScore;
-            
+            cmputerScore.textContent = "Computer" + "    " +  computerScore;
+          
+         
          return ("You lost." + computerSelection + "beats" + playerSelection);
          }
          
@@ -65,13 +66,14 @@ function playRound(playerSelection, computerSelection)      {
             playerScore = playerScore + 1;
             checkScore(playerScore,  computerScore)
             plyerScore.textContent = playerName + "        " + playerScore;
+           
             return ("You win, " + playerSelection + " beats " + computerSelection);
          }
   
 
          else if (playerSelection === "paper" && computerSelection === "scissors") {
             computerScore = computerScore + 1;
-            cmputerScore.textContent = computerScore;
+            cmputerScore.textContent = "Computer" + "      "+ computerScore;
             checkScore(playerScore,  computerScore)
             return ("You lost. " + computerSelection + " beats " + playerSelection);
         }
@@ -79,14 +81,14 @@ function playRound(playerSelection, computerSelection)      {
         else if (playerSelection === "paper" && computerSelection === "rock") {
             playerScore = playerScore + 1;
             plyerScore.textContent = playerName + "        " + playerScore;
-            checkScore(playerScore,  computerScore)
+            checkScore(playerScore,  computerScore);
             return ("You win," + playerSelection + " beats " + computerSelection);
       }
 
          else if(playerSelection === "scissors" && computerSelection === "rock") {
             computerScore = computerScore + 1;
-            cmputerScore.textContent = computerScore;
-            checkScore(playerScore,  computerScore)
+            cmputerScore.textContent = "Computer" + "    " + computerScore;
+            checkScore(playerScore,  computerScore);
             return ("You lost." + computerSelection + " beats " + playerSelection);
         }
 
@@ -94,7 +96,7 @@ function playRound(playerSelection, computerSelection)      {
         else if (playerSelection === "scissors" && computerSelection === "paper") {
             playerScore = playerScore + 1;
             plyerScore.textContent = playerName + "      "  + playerScore;
-            cmputerScore.textContent = computerScore;
+            cmputerScore.textContent = "Computer" + "     " + computerScore;
             checkScore(playerScore,  computerScore)
             return ("You win," + playerSelection + " beats " + computerSelection);
          }
